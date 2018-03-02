@@ -54,3 +54,15 @@ C:\Users\zhangmingchen\Desktop\临时演示\展示\superchangefortest\superchang
 C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\bin\Debug\superchangefortest.exe.config
 C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\obj\Debug\superchangefortest.exe
 C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\obj\Debug\superchangefortest.pdb
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\bin\Debug\superchangefortest.exe
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\bin\Debug\superchangefortest.pdb
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\bin\Debug\AForge.Math.dll
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\bin\Debug\AForge.xml
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\bin\Debug\AForge.Controls.xml
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\bin\Debug\AForge.Imaging.xml
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\bin\Debug\AForge.Video.xml
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\bin\Debug\AForge.Math.xml
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\obj\Debug\superchangefortest.csprojResolveAssemblyReference.cache
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\obj\Debug\superchangefortest.Form1.resources
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\obj\Debug\superchangefortest.Properties.Resources.resources
+C:\Users\zhangmingchen\Source\Repos\superchangefortest\superchangefortest\superchangefortest\obj\Debug\superchangefortest.csproj.GenerateResource.Cache

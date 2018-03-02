@@ -14,24 +14,11 @@ namespace superchangefortest
     public partial class Form1 : Form
     {
 
-        System.Drawing.Image img1;
-        System.Drawing.Image img2;
-        System.Drawing.Image img3;
-        System.Drawing.Image img4;
-        System.Drawing.Image img5;
-        System.Drawing.Image img6;
-        System.Drawing.Image img7;
-        System.Drawing.Image img8;
-        System.Drawing.Image img9;
-        System.Drawing.Image img10;
-        System.Drawing.Image img11;
-        System.Drawing.Image img12;
-        System.Drawing.Image img13;
-        System.Drawing.Image img14;
-        System.Drawing.Image img15;
+        System.Drawing.Image [] imgs=new Image[20];
+
 
         int flag = 1;
-        int flag2 = 1;
+        int flag2 = 11;
 
         public Form1()
         {
@@ -40,21 +27,20 @@ namespace superchangefortest
 
         private void button1_Click(object sender, EventArgs e)
         {
-            img1 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged1.jpg");//双引号里是图片的路径
-            img2 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged2.jpg");//双引号里是图片的路径
-            img3 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged3.jpg");//双引号里是图片的路径
-            img4 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged4.jpg");//双引号里是图片的路径
-            img5 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged5.jpg");//双引号里是图片的路径
-            img6 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged6.jpg");//双引号里是图片的路径
-            img7 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged7.jpg");//双引号里是图片的路径
-            img8 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged8.jpg");//双引号里是图片的路径
-            img9 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged9.jpg");//双引号里是图片的路径
-            img10 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged10.jpg");//双引号里是图片的路径
-            img11 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged11.jpg");//双引号里是图片的路径
-            img12 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged12.jpg");//双引号里是图片的路径
-            img13 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged13.jpg");//双引号里是图片的路径
-            img14 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged14.jpg");//双引号里是图片的路径
-            img15 = System.Drawing.Image.FromFile("C:\\Users\\zhangmingchen\\Desktop\\timgchanged15.jpg");//双引号里是图片的路径
+
+            string str2 = System.IO.Directory.GetCurrentDirectory();
+
+
+            string zzz = str2+ "\\timgchanged";
+
+            for(int i = 1; i < 16; i++)
+            {
+                string zzz2 = zzz + i + ".jpg";
+
+                imgs[i]= System.Drawing.Image.FromFile(zzz2);//双引号里是图片的路径
+            }
+
+            
             timer1.Start();
 
 
@@ -235,116 +221,89 @@ namespace superchangefortest
         private void timer1_Tick(object sender, EventArgs e)
         {
             
+            for(int i = 1; i < 10; i++)
+            {
 
-            if (flag == 1) {
-                pictureBox1.Image = img1;
-                flag++;
+                if (flag == i)
+                {
+                    pictureBox1.Image = imgs[i];
+                    flag++;
+                    if (flag == 10)
+                    {
+                        flag = 1;
+                    }
+                    break;
+                }
+
+
             }
-            else if(flag == 2)
+            for (int i = 11; i < 16; i++)
             {
-                pictureBox1.Image = img2;
-                flag++;
-            }
-            else if (flag == 3)
-            {
-                pictureBox1.Image = img3;
-                flag++;
-            }
-            else if (flag == 4)
-            {
-                pictureBox1.Image = img4;
-                flag++;
-            }
-            else if (flag == 5)
-            {
-                pictureBox1.Image = img5;
-                
-                flag++;
-            }
-            else if (flag == 6)
-            {
-                pictureBox1.Image = img6;
-               
-                flag++;
-            }
-            else if (flag == 7)
-            {
-                pictureBox1.Image = img7;
-                flag++;
-            }
-            else if (flag == 8)
-            {
-                pictureBox1.Image = img8;
-                flag++;
-            }
-            else if (flag == 9)
-            {
-                pictureBox1.Image = img9;
-                flag++;
-            }
-            else if (flag == 10)
-            {
-                pictureBox1.Image = img10;
-                flag=1;
+
+                if (flag2 == i)
+                {
+                    pictureBox2.Image = imgs[i];
+                    flag2++;
+                    if (flag2 == 16)
+                    {
+                        flag2 = 11;
+                    }
+                    break;
+                }
+
             }
 
-            if (flag2 == 1)
-            {
-                pictureBox2.Image = img11;
-                flag2++;
-            }
-            else if (flag2 == 2)
-            {
-                pictureBox2.Image = img12;
-                flag2++;
-            }
-            else if (flag2 == 3)
-            {
-                pictureBox2.Image = img13;
-                flag2++;
-            }
-            else if (flag2 == 4)
-            {
-                pictureBox2.Image = img14;
-                flag2++;
-            }
-            else if (flag2 == 5)
-            {
-                pictureBox2.Image = img15;
-                flag2=1;
-            }
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+
+
+            int sz = Convert.ToInt16(textBox1.Text);
+
             Point bufpoint = this.Location;
-            bufpoint.Y -= 10;
+            bufpoint.Y -= sz;
 
             this.Location = bufpoint;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            int sz = Convert.ToInt16(textBox1.Text);
+
             Point bufpoint = this.Location;
-            bufpoint.Y += 10;
+            bufpoint.Y += sz;
 
             this.Location = bufpoint;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            int sz = Convert.ToInt16(textBox1.Text);
             Point bufpoint = this.Location;
-            bufpoint.X -= 10;
+            bufpoint.X -= sz;
 
             this.Location = bufpoint;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            int sz = Convert.ToInt16(textBox1.Text);
             Point bufpoint = this.Location;
-            bufpoint.X += 10;
+            bufpoint.X += sz;
 
             this.Location = bufpoint;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
