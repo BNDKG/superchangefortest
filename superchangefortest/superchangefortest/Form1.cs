@@ -172,12 +172,15 @@ namespace superchangefortest
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Location = new Point(0,-10);
+            this.Location = new Point(100,100);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Location = new Point(124, 638);
+            int szx = Convert.ToInt16(textBox2.Text);
+            int szy = Convert.ToInt16(textBox3.Text);
+
+            this.Location = new Point(szx, szy);
         }
 
         private void button4_Click(object sender, EventArgs e)
